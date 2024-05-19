@@ -12,6 +12,7 @@
 		2A783DC52BF9CBD8009AE926 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A783DC42BF9CBD8009AE926 /* Assets.xcassets */; };
 		2A783DC82BF9CBD8009AE926 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A783DC72BF9CBD8009AE926 /* Preview Assets.xcassets */; };
 		2A783DCF2BF9CBEF009AE926 /* MountainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A783DCE2BF9CBEF009AE926 /* MountainModel.swift */; };
+		2A783DD12BF9CF40009AE926 /* MountainRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A783DD02BF9CF40009AE926 /* MountainRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		2A783DC42BF9CBD8009AE926 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A783DC72BF9CBD8009AE926 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2A783DCE2BF9CBEF009AE926 /* MountainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainModel.swift; sourceTree = "<group>"; };
+		2A783DD02BF9CF40009AE926 /* MountainRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				2A783DC02BF9CBD6009AE926 /* MoutainsApp.swift */,
+				2A783DD02BF9CF40009AE926 /* MountainRowView.swift */,
 				2A783DC22BF9CBD6009AE926 /* ContentView.swift */,
 				2A783DC42BF9CBD8009AE926 /* Assets.xcassets */,
 				2A783DC62BF9CBD8009AE926 /* Preview Content */,
@@ -142,6 +145,7 @@
 			files = (
 				2A783DCF2BF9CBEF009AE926 /* MountainModel.swift in Sources */,
 				2A783DC32BF9CBD6009AE926 /* ContentView.swift in Sources */,
+				2A783DD12BF9CF40009AE926 /* MountainRowView.swift in Sources */,
 				2A783DC12BF9CBD6009AE926 /* MoutainsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

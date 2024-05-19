@@ -6,19 +6,27 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
+  @Environment(\.modelContext) private var modelContext
+  @Query private var mountains: [MountainModel]
+  
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+      NavigationStack {
+        List(mountains) { mountain in
+              MountainRowView(mountain: mountain)
+        }.navigationTitle("Versioning")
+          .toolbar {
+            Button("", systemImage: "plus") {
+              MountainModel.addVersion1Data(modelContext: modelContext)
+            }
+          }
+      }
     }
 }
 
 #Preview {
     ContentView()
+    .modelContainer(MountainModel.preview)
 }

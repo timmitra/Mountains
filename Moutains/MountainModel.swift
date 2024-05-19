@@ -9,7 +9,11 @@ import Foundation
 import SwiftData
 import UIKit
 
-@Model
+// MARK: - STEP 1: UPDATE TYPE ALIASES
+typealias MountainModel = MountainModelSchemaV1.MountainModel
+
+
+/*@Model
 class MountainModel {
   var name: String
   var country: String
@@ -24,7 +28,7 @@ class MountainModel {
     self.country = country
     self.image = image
   }
-}
+}*/
 
 extension MountainModel {
   @MainActor
@@ -47,10 +51,36 @@ extension MountainModel {
   }
 }
 
-extension MountainModel {
+
+enum MountainModelSchemaV1: VersionedSchema {
+  static var versionIdentifier = Schema.Version(1, 0, 0)
   
+  static var models: [any PersistentModel.Type] {
+    [MountainModel.self]
+  }
+  
+  @Model
+  class MountainModel {
+    var name: String
+    var country: String
+    var image: Data? = nil
+    
+    init(
+      name: String,
+      country: String,
+      image: Data? = nil
+    ) {
+      self.name = name
+      self.country = country
+      self.image = image
+    }
+  }
+}
+
+// MARK: - EXTENSIONS
+extension MountainModel {
   var viewImage: UIImage {
-      guard let image = image else { return UIImage(resource: .newMountain) }
-      return UIImage(data: image) ?? UIImage(resource: .newMountain)
+    guard let image = image else { return UIImage(resource: .newMountain) }
+    return UIImage(data: image) ?? UIImage(resource: .newMountain)
   }
 }
