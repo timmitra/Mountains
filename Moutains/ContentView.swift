@@ -19,7 +19,7 @@ struct ContentView: View {
         }.navigationTitle("Versioning")
           .toolbar {
             Button("", systemImage: "plus") {
-              MountainModel.addVersion1Data(modelContext: modelContext)
+              MountainModel.addVersion2Data(modelContext: modelContext)
             }
           }
       }
