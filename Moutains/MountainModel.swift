@@ -59,16 +59,57 @@ extension MountainModel {
 enum MountainModelMigrationPlan: SchemaMigrationPlan {
   static var schemas: [any VersionedSchema.Type] {
     // Step 1 Append new versions to this array
-    [MountainModelSchemaV1.self, MountainModelSchemaV2.self]
+    [
+      MountainModelSchemaV1.self,
+      MountainModelSchemaV2.self,
+      MountainModelSchemaV3.self
+    ]
   }
     // Step 2 define your migration steps as lightweight or custom
     static let migrateV1toV2 = MigrationStage.lightweight(
       fromVersion: MountainModelSchemaV1.self,
       toVersion: MountainModelSchemaV2.self)
   
+  // Mountain-to-country for migrateV2toV3
+  static var mountainToCountryDictionary: [String: String] = [:]
+  
+  static let migrateV2toV3 = MigrationStage.custom(
+    fromVersion: MountainModelSchemaV2.self,
+    toVersion: MountainModelSchemaV3.self,
+    willMigrate: { modelContext in
+      // willMigrate before migration
+      guard let mountains = try? modelContext.fetch(FetchDescriptor<MountainModelSchemaV2.MountainModel>()) else {
+        return
+      }
+       // save the mapping of mountain name to country
+      mountainToCountryDictionary = mountains.reduce(into: [:], { $0[$1.name] = $1.country })
+    }, didMigrate: { modelContext in
+      // after migration
+      let uniqueCountries = Set(mountainToCountryDictionary.values)
+      // Add Countries
+      for country in uniqueCountries {
+        modelContext.insert(MountainModelSchemaV3.MountainCountryModel(name: country))
+      }
+      try? modelContext.save()
+      
+      guard let mountains = try? modelContext.fetch(FetchDescriptor<MountainModelSchemaV3.MountainModel>()) else {
+        return
+      }
+      guard let countries = try? modelContext.fetch(FetchDescriptor<MountainModelSchemaV3.MountainCountryModel>()) else {
+        return
+      }
+      // Match mountains to countries
+      for mtnToCountry in mountainToCountryDictionary {
+        guard let mtnModel = mountains.first(where: { $0.name == mtnToCountry.key}) else { return }
+        guard let countryModel = countries.first(where: { $0.name == mtnToCountry.value}) else { return }
+        mtnModel.country = countryModel
+        try? modelContext.save()
+      }
+    })
+  
   static var stages: [MigrationStage] {
     // Step 3 append new stages to this array
-    [migrateV1toV2]
+    [migrateV1toV2, migrateV2toV3]
   }
 
 }
