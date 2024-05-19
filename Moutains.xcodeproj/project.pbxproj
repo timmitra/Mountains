@@ -11,6 +11,7 @@
 		2A783DC32BF9CBD6009AE926 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A783DC22BF9CBD6009AE926 /* ContentView.swift */; };
 		2A783DC52BF9CBD8009AE926 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A783DC42BF9CBD8009AE926 /* Assets.xcassets */; };
 		2A783DC82BF9CBD8009AE926 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A783DC72BF9CBD8009AE926 /* Preview Assets.xcassets */; };
+		2A783DCF2BF9CBEF009AE926 /* MountainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A783DCE2BF9CBEF009AE926 /* MountainModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		2A783DC22BF9CBD6009AE926 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2A783DC42BF9CBD8009AE926 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A783DC72BF9CBD8009AE926 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2A783DCE2BF9CBEF009AE926 /* MountainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				2A783DC22BF9CBD6009AE926 /* ContentView.swift */,
 				2A783DC42BF9CBD8009AE926 /* Assets.xcassets */,
 				2A783DC62BF9CBD8009AE926 /* Preview Content */,
+				2A783DCE2BF9CBEF009AE926 /* MountainModel.swift */,
 			);
 			path = Moutains;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A783DCF2BF9CBEF009AE926 /* MountainModel.swift in Sources */,
 				2A783DC32BF9CBD6009AE926 /* ContentView.swift in Sources */,
 				2A783DC12BF9CBD6009AE926 /* MoutainsApp.swift in Sources */,
 			);
