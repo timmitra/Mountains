@@ -11,7 +11,9 @@ import UIKit
 
 // MARK: - STEP 1: UPDATE TYPE ALIASES
 //typealias MountainModel = MountainModelSchemaV1.MountainModel
-typealias MountainModel = MountainModelSchemaV2.MountainModel
+//typealias MountainModel = MountainModelSchemaV2.MountainModel
+typealias MountainModel = MountainModelSchemaV3.MountainModel
+typealias MountainCountryModel = MountainModelSchemaV3.MountainCountryModel
 
 
 /*@Model
@@ -39,18 +41,33 @@ extension MountainModel {
     // Version 1
 //    addVersion1Data(modelContext: container.mainContext)
     // Version 2
-    addVersion2Data(modelContext: container.mainContext)
+//    addVersion2Data(modelContext: container.mainContext)
+    // Version 3
+    addVersion3Data(modelContext: container.mainContext)
     
     return container
   }
   
-  static func addVersion2Data(modelContext: ModelContext) {
-    modelContext.insert(MountainModel(name: "Mount Rainier", country: "United States", elevation: 14_409, image: UIImage(resource: .rainier).pngData()!))
-    modelContext.insert(MountainModel(name: "Denali", country: "United States", elevation: 20_308, image: UIImage(resource: .denali).pngData()!))
-    modelContext.insert(MountainModel(name: "Mount Fuji", country: "Japan", elevation: 12_388,image: UIImage(resource: .fuji).pngData()!))
-    modelContext.insert(MountainModel(name: "Mount Kita", country: "Japan", elevation: 10_476,image: UIImage(resource: .kita).pngData()!))
-    modelContext.insert(MountainModel(name: "Mount Blanc", country: "Switzerland", elevation: 15_777, image: UIImage(resource: .blanc).pngData()!))
-    modelContext.insert(MountainModel(name: "Matterhorn", country: "Switzerland", elevation: 14_692, image: UIImage(resource: .matterhorn).pngData()!))
+  static func addVersion3Data(modelContext: ModelContext) {
+    // Mountains
+    let rainier = MountainModel(name: "Mount Rainier", elevation: 14_409, image: UIImage(resource: .rainier).pngData()!)
+    let denali = MountainModel(name: "Denali", elevation: 20_308, image: UIImage(resource: .denali).pngData()!)
+    let fuji = MountainModel(name: "Mount Fuji", elevation: 12_388,image: UIImage(resource: .fuji).pngData()!)
+    let kita = MountainModel(name: "Mount Kita", elevation: 10_476,image: UIImage(resource: .kita).pngData()!)
+    let blanc = MountainModel(name: "Mount Blanc", elevation: 15_777, image: UIImage(resource: .blanc).pngData()!)
+    let matterhorn = MountainModel(name: "Matterhorn", elevation: 14_692, image: UIImage(resource: .matterhorn).pngData()!)
+    
+    //Countries
+    let usa = MountainCountryModel(name: "United States")
+    let japan = MountainCountryModel(name: "Japan")
+    let switzerland = MountainCountryModel(name: "Switzerland")
+    
+    modelContext.insert(usa)
+    usa.mountains = [rainier, denali]
+    modelContext.insert(japan)
+    japan.mountains = [fuji, kita]
+    modelContext.insert(switzerland)
+    switzerland.mountains = [blanc, matterhorn]
   }
 
 }
@@ -188,7 +205,7 @@ enum MountainModelSchemaV3: VersionedSchema {
     
     init(
       name: String,
-      country: MountainCountryModel?,
+      country: MountainCountryModel? = nil,
       elevation: Int,
       image: Data? = nil
     ) {
