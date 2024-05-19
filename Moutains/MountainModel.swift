@@ -133,7 +133,7 @@ enum MountainModelSchemaV3: VersionedSchema {
   static var versionIdentifier = Schema.Version(3, 0, 0)
   
   static var models: [any PersistentModel.Type] {
-    [MountainModel.self]
+    [MountainModel.self, MountainCountryModel.self]
   }
   
   @Model
