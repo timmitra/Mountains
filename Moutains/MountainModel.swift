@@ -46,3 +46,11 @@ extension MountainModel {
     modelContext.insert(MountainModel(name: "Matterhorn", country: "Switzerland", image: UIImage(resource: .matterhorn).pngData()!))
   }
 }
+
+extension MountainModel {
+  
+  var viewImage: UIImage {
+      guard let image = image else { return UIImage(resource: .newMountain) }
+      return UIImage(data: image) ?? UIImage(resource: .newMountain)
+  }
+}
