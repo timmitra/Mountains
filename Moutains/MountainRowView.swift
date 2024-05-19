@@ -25,7 +25,8 @@ struct MountainRowView: View {
         // Version 2
         Text(mountain.viewElevation, format: .measurement(width: .abbreviated, usage: .asProvided))
           .font(.footnote)
-        Text(mountain.country)
+        // Version 3
+        Text(mountain.country?.name ?? "(none)")
           .foregroundStyle(.secondary)
       }
     }
@@ -35,8 +36,11 @@ struct MountainRowView: View {
 #Preview {
   let container = try! ModelContainer(for: MountainModel.self, configurations: ModelConfiguration(isStoredInMemoryOnly: false))
   
-  // Version 1
-  let mountain = MountainModel(name: "Big Mountain", country: "United States", elevation: 14_409, image: UIImage(resource: .newMountain).pngData()!)
+  // Version 3
+  let mountain = MountainModel(name: "Big Mountain", elevation: 14_409, image: UIImage(resource: .newMountain).pngData()!)
+  let country = MountainCountryModel(name: "United States")
+  container.mainContext.insert(country)
+  country.mountains = [mountain]
   
   return List {
     MountainRowView(mountain: mountain)
