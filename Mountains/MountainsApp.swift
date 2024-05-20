@@ -1,6 +1,6 @@
 //
-//  MoutainsApp.swift
-//  Moutains
+//  MountainsApp.swift
+//  Mountains
 //
 //  Created by Tim Mitra on 2024-05-19.
 //
@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 @main
-struct MoutainsApp: App {
+struct MountainsApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

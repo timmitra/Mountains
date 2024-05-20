@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A783DC12BF9CBD6009AE926 /* MoutainsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A783DC02BF9CBD6009AE926 /* MoutainsApp.swift */; };
+		2A783DC12BF9CBD6009AE926 /* MountainsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A783DC02BF9CBD6009AE926 /* MountainsApp.swift */; };
 		2A783DC32BF9CBD6009AE926 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A783DC22BF9CBD6009AE926 /* ContentView.swift */; };
 		2A783DC52BF9CBD8009AE926 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A783DC42BF9CBD8009AE926 /* Assets.xcassets */; };
 		2A783DC82BF9CBD8009AE926 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A783DC72BF9CBD8009AE926 /* Preview Assets.xcassets */; };
@@ -16,8 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2A783DBD2BF9CBD6009AE926 /* Moutains.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moutains.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A783DC02BF9CBD6009AE926 /* MoutainsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoutainsApp.swift; sourceTree = "<group>"; };
+		2A783DBD2BF9CBD6009AE926 /* Mountains.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mountains.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A783DC02BF9CBD6009AE926 /* MountainsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainsApp.swift; sourceTree = "<group>"; };
 		2A783DC22BF9CBD6009AE926 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2A783DC42BF9CBD8009AE926 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A783DC72BF9CBD8009AE926 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -39,7 +39,7 @@
 		2A783DB42BF9CBD6009AE926 = {
 			isa = PBXGroup;
 			children = (
-				2A783DBF2BF9CBD6009AE926 /* Moutains */,
+				2A783DBF2BF9CBD6009AE926 /* Mountains */,
 				2A783DBE2BF9CBD6009AE926 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,22 +47,22 @@
 		2A783DBE2BF9CBD6009AE926 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2A783DBD2BF9CBD6009AE926 /* Moutains.app */,
+				2A783DBD2BF9CBD6009AE926 /* Mountains.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2A783DBF2BF9CBD6009AE926 /* Moutains */ = {
+		2A783DBF2BF9CBD6009AE926 /* Mountains */ = {
 			isa = PBXGroup;
 			children = (
-				2A783DC02BF9CBD6009AE926 /* MoutainsApp.swift */,
+				2A783DC02BF9CBD6009AE926 /* MountainsApp.swift */,
 				2A783DD02BF9CF40009AE926 /* MountainRowView.swift */,
 				2A783DC22BF9CBD6009AE926 /* ContentView.swift */,
 				2A783DC42BF9CBD8009AE926 /* Assets.xcassets */,
 				2A783DC62BF9CBD8009AE926 /* Preview Content */,
 				2A783DCE2BF9CBEF009AE926 /* MountainModel.swift */,
 			);
-			path = Moutains;
+			path = Mountains;
 			sourceTree = "<group>";
 		};
 		2A783DC62BF9CBD8009AE926 /* Preview Content */ = {
@@ -76,9 +76,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2A783DBC2BF9CBD6009AE926 /* Moutains */ = {
+		2A783DBC2BF9CBD6009AE926 /* Mountains */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2A783DCB2BF9CBD8009AE926 /* Build configuration list for PBXNativeTarget "Moutains" */;
+			buildConfigurationList = 2A783DCB2BF9CBD8009AE926 /* Build configuration list for PBXNativeTarget "Mountains" */;
 			buildPhases = (
 				2A783DB92BF9CBD6009AE926 /* Sources */,
 				2A783DBA2BF9CBD6009AE926 /* Frameworks */,
@@ -88,9 +88,9 @@
 			);
 			dependencies = (
 			);
-			name = Moutains;
+			name = Mountains;
 			productName = Moutains;
-			productReference = 2A783DBD2BF9CBD6009AE926 /* Moutains.app */;
+			productReference = 2A783DBD2BF9CBD6009AE926 /* Mountains.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -108,7 +108,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2A783DB82BF9CBD6009AE926 /* Build configuration list for PBXProject "Moutains" */;
+			buildConfigurationList = 2A783DB82BF9CBD6009AE926 /* Build configuration list for PBXProject "Mountains" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -121,7 +121,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2A783DBC2BF9CBD6009AE926 /* Moutains */,
+				2A783DBC2BF9CBD6009AE926 /* Mountains */,
 			);
 		};
 /* End PBXProject section */
@@ -146,7 +146,7 @@
 				2A783DCF2BF9CBEF009AE926 /* MountainModel.swift in Sources */,
 				2A783DC32BF9CBD6009AE926 /* ContentView.swift in Sources */,
 				2A783DD12BF9CF40009AE926 /* MountainRowView.swift in Sources */,
-				2A783DC12BF9CBD6009AE926 /* MoutainsApp.swift in Sources */,
+				2A783DC12BF9CBD6009AE926 /* MountainsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +279,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Moutains/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Mountains/Preview Content\"";
 				DEVELOPMENT_TEAM = 476QK54UU2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -293,7 +293,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.it-guy.Moutains";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.it-guy.Mountains";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -308,7 +308,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Moutains/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Mountains/Preview Content\"";
 				DEVELOPMENT_TEAM = 476QK54UU2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -322,7 +322,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.it-guy.Moutains";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.it-guy.Mountains";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -333,7 +333,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2A783DB82BF9CBD6009AE926 /* Build configuration list for PBXProject "Moutains" */ = {
+		2A783DB82BF9CBD6009AE926 /* Build configuration list for PBXProject "Mountains" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2A783DC92BF9CBD8009AE926 /* Debug */,
@@ -342,7 +342,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2A783DCB2BF9CBD8009AE926 /* Build configuration list for PBXNativeTarget "Moutains" */ = {
+		2A783DCB2BF9CBD8009AE926 /* Build configuration list for PBXNativeTarget "Mountains" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2A783DCC2BF9CBD8009AE926 /* Debug */,
